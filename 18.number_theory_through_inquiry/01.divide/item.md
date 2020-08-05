@@ -344,11 +344,7 @@ $x=24n+7, y=-175n-51, n\in Z$
 
 *另一个证明*：
 
-给定给定条件的$a, b$，令$S={ax+by\mid x, y\in Z, ax+by>0}$，集合$S$显然不会为空，因为当$x=\pm1, y=0$时，必然可以得到$\pm a$，其中有一个肯定是$S$的元素。根据良序原理，一定存在一个最小的元素$min=as+bt$。
-
-$a=min*q+r, 0\le r<min$，于是：
-
-$r=a-min * q=a-q(as+bt)=a(1-qs)+b(-qt)$。因为$r$可以写成$ax+by$的形式，所以$r\in S \cup \{0\}$。但是，$0\le r<min$，而$min$已经是$S$中最小的元素，所以$r$只能为0，所以$min\mid a$，同理可证$min\mid b$，所以$min$是$a, b$的公约数。
+给定给定条件的$a, b$，令$S={ax+by\mid x, y\in Z, ax+by>0}$，集合$S$显然不会为空，因为当$x=\pm1, y=0$时，必然可以得到$\pm a$，其中有一个肯定是$S$的元素。根据良序原理，一定存在一个最小的元素$min=as+bt$，因此$a=min*q+r, 0\le r<min$，于是：$r=a-min * q=a-q(as+bt)=a(1-qs)+b(-qt)$。因为$r$可以写成$ax+by$的形式，所以$r\in S \cup \{0\}$。但是，$0\le r<min$，而$min$已经是$S$中最小的元素，所以$r$只能为0，所以$min\mid a$，同理可证$min\mid b$，所以$min$是$a, b$的公约数。
 
 假定$m'$也是$a, b$的公约数，所以$a=m'u, b=m'v$，因此$d=as+bt=m'us+m'vt=m'(us+vt)$，也就是说$c\le d$。因此，$d$已经是最大的公约数。QED。
 
@@ -374,13 +370,14 @@ $acx+bcy=c$。注意到，$a\mid acx, a\mid bcy$，所以等式左边的式子�
 
 由题设得，$ac-bc=kn => (a-b)c=kn$。这表明$c\mid kn$。根据定理1.41, 如果$c\mid kn$，且$(c, n)=1$，那么$c\mid k$。假定$k=k'c$，于是$c(a-b)=kn=k'cn => a-b=k'n$，因此$a\equiv b\:(mod\:n)$。QED。
 
-**定理1.48**：令$a, b, c$为整数，且$a, b$不同时为0，则存在整数$x, y$满足等式$ax+by=c$当且仅当$(a, b)|c$。
+**定理1.48**：令$a, b, c$为整数，且$a, b$不同时为0，则存在整数$x, y$满足等式$ax+by=c$当且仅当$(a, b)\mid c$。
 
 *证明*：
 
-令$(a, b)=k$，于是$k\mid a, k\mid b$，因此$a, b$可以写成：$a=ka', b=kb'$。$c=ax+by=ka'x+kb'y=k(a'x+b'y)$。因此$k|c$。
+令$(a, b)=k$，于是$k\mid a, k\mid b$，因此$a, b$可以写成：$a=ka', b=kb'$。$c=ax+by=ka'x+kb'y=k(a'x+b'y)$。因此$k\mid c$。
 
-反过来，假定$(a,b)=d, d|c$，则$c=kd$，根据定理1.40，存在$x', y'$使得$ax'+by'=d$，于是$ax'k+by'k=kd => ax+by=c$。QED。
+反过来，假定$(a,b)=d, d\mid c$，则$c=kd$，根据定理1.40，存在$x', y'$使得$ax'+by'=d$，于是$ax'k+by'k=kd => ax+by=c$。QED。
 
+有了这些准备工作，我们已经开始在解决
 
 [^1]: 我觉得我这个证明不是很严格。不过也就是我能达到的水平了。TAT
