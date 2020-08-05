@@ -344,13 +344,11 @@ $x=24n+7, y=-175n-51, n\in Z$
 
 *另一个证明*：
 
-给定给定条件的$a, b$，令$S={ax+by\mid x, y\in Z, ax+by>0}$，集合$S$显然不会为空，因为当$x=\pm1, y=0$时，必然可以得到$\pm a$，其中有一个肯定是$S$的元素。根据良序原理，一定存在一个最小的元素$min=as+bt$，使得：
+给定给定条件的$a, b$，令$S={ax+by\mid x, y\in Z, ax+by>0}$，集合$S$显然不会为空，因为当$x=\pm1, y=0$时，必然可以得到$\pm a$，其中有一个肯定是$S$的元素。根据良序原理，一定存在一个最小的元素$min=as+bt$，使得：$a=min*q+r, 0\le r\lt min$
 
-$a=min*q+r, 0\le r<min$
+于是：$r=a-min*q=a-q(as+bt)=a(1-qs)+b(-qt)$。
 
-于是：$r=a-min * q=a-q(as+bt)=a(1-qs)+b(-qt)$。
-
-因为$r$可以写成$ax+by$的形式，所以$r\in S \cup \{0\}$。但是，$0\le r<min$，而$min$已经是$S$中最小的元素，所以$r$只能为0，所以$min\mid a$，同理可证$min\mid b$，所以$min$是$a, b$的公约数。
+因为$r$可以写成$ax+by$的形式，所以$r\in S \cup \{0\}$。但是，$0\le r\lt min$，而$min$已经是$S$中最小的元素，所以$r$只能为0，所以$min\mid a$，同理可证$min\mid b$，所以$min$是$a, b$的公约数。
 
 假定$m'$也是$a, b$的公约数，所以$a=m'u, b=m'v$，因此$d=as+bt=m'us+m'vt=m'(us+vt)$，也就是说$c\le d$。因此，$d$已经是最大的公约数。QED。
 
