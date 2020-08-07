@@ -440,6 +440,40 @@ $kb=p_1^{s_1+t_1}p_2^{s_2+t_2}...p_n^{s_n+t_n}...$
 
 注意到：$min(a+x, b+x)=x+min(a, b)$，所以$(ka, kb)=p_1^{t_1}p_2^{t_2}...p_n^{t_n}...*p_1^{min(r_1, s_1)}p_2^{min(r_2, s_2)}...p_n^{min(r_n, s_n)}...=k*(a, b)$。QED。
 
+用到定理1.53的证明如下：
+
+令$g=(a, b)$，那么$g$就是$ax+by$能得到的最小自然数值。所以$(ka, kb)$就是$akx+bky$能得到的最小自然数值，也就是$k*(ax+by)的最小值$，也就是$k*g$。QED。
+
+我们已经知道GCD的概念：它是所谓的公约数，也就是这里牵涉到了整除。那么对于倍数（乘法），我们有怎样的值呢？那就是**最小公倍数（LCM, Least Common Multiplier)**。
+
+**定理1.57**：如果$a, b$为自然数，那么$gcd(a, b)*lcm(a, b)=ab$。
+
+**推论1.58**：如果$a, b$为自然数，那么$lcm(a, b)=ab$当且仅当$a, b$互质。
+
+*证明*：
+
+我们先证明一个引理：如果$m>0$，那么$lcm(ma, mb)=m*lcm(a, b)$。
+
+因为$lcm(ma, mb)$是$ma$的倍数，也就肯定是$m$的倍数，也就是说$m\mid lcm(ma, mb)$。
+
+令$mh_1=lcm(ma, mb), h_2=lcm(a, b)$。
+
+$ma|mh_1 =\gt a|h_1, mb|mh_1 =\gt b|h_1$。因此$h_1$是$a, b$共同的倍数。但我们已经知道$h_2$是最小公倍数，所以$h_1\ge h_2$。
+
+同时，$a\mid h_2 =\gt am\mid mh_2, b\mid h_2 =\gt bm\mid h_2$，所以$mh_2$是$ma, mb$的公倍数，而$mh_1$才是$ma, mb$的最小公倍数，所以$mh_2 \ge mh_1 =\gt h_2\ge h_1$。
+
+综上，$h_1=h_2$。引理证明完毕。
+
+令$g=(a, b) =\gt a=gc, b=gd$。因此$(c, d)=(a/g, d/g)=1$。
+
+$c\mid lcm(c,d) =\gt lcm(c, d)=kc$。由于$d\mid kc, (c,d)=1, d\mid k$，因此$cd\le kc$。但$cd$是一个倍数，而$kc$是最小公倍数，所以$kc\le cd$。综合一下，只能是$kc=cd$，也就是$lcm(c,d)=cd$。
+
+结合引理我们得到：
+
+$lcm(a, b)*gcd(a,b)=lcm(gc, gd)*g=g*lcm(c, d)*d=gcdg=(gc)(gd)=ab$。QED。
+
+
+
 
 
 [^1]: 我觉得我这个证明不是很严格。不过也就是我能达到的水平了。TAT
