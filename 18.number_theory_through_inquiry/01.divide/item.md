@@ -360,7 +360,7 @@ $acx+bcy=c$。注意到，$a\mid acx, a\mid bcy$，所以等式左边的式子�
 
 **定理1.42**：令$a, b, n$为整数，如果$a\mid n, b\mid n, (a, b)=1$，则$ab\mid n$。
 
-*证明*：由$(a, b)=1$，得$ax+by=1 => anx+bny=n$。又由$a\mid n, b\mid n => n=k_1a, n=k_2b$，因此$anx+bny=abk_2x+abk_1y=n =>ab(k_1y+k_2x)=n$，显然$ab\mid n$。QED。
+*证明*：由$(a, b)=1$，得$ax+by=1 \implies anx+bny=n$。又由$a\mid n, b\mid n \implies n=k_1a, n=k_2b$，因此$anx+bny=abk_2x+abk_1y=n \implies ab(k_1y+k_2x)=n$，显然$ab\mid n$。QED。
 
 **定理1.43**：令$a, b, n$为整数，且$(a, n)=1, (b, n)=1$，则$(ab, n)=1$。
 
@@ -372,7 +372,7 @@ $acx+bcy=c$。注意到，$a\mid acx, a\mid bcy$，所以等式左边的式子�
 
 *证明*：
 
-由题设得，$ac-bc=kn => (a-b)c=kn$。这表明$c\mid kn$。根据定理1.41, 如果$c\mid kn$，且$(c, n)=1$，那么$c\mid k$。假定$k=k'c$，于是$c(a-b)=kn=k'cn => a-b=k'n$，因此$a\equiv b\:(mod\:n)$。QED。
+由题设得，$ac-bc=kn \implies (a-b)c=kn$。这表明$c\mid kn$。根据定理1.41, 如果$c\mid kn$，且$(c, n)=1$，那么$c\mid k$。假定$k=k'c$，于是$c(a-b)=kn=k'cn \implies a-b=k'n$，因此$a\equiv b\:(mod\:n)$。QED。
 
 **定理1.48**：令$a, b, c$为整数，且$a, b$不同时为0，则存在整数$x, y$满足等式$ax+by=c$当且仅当$(a, b)\mid c$。
 
@@ -380,7 +380,7 @@ $acx+bcy=c$。注意到，$a\mid acx, a\mid bcy$，所以等式左边的式子�
 
 令$(a, b)=k$，于是$k\mid a, k\mid b$，因此$a, b$可以写成：$a=ka', b=kb'$。$c=ax+by=ka'x+kb'y=k(a'x+b'y)$。因此$k\mid c$。
 
-反过来，假定$(a,b)=d, d\mid c$，则$c=kd$，根据定理1.40，存在$x', y'$使得$ax'+by'=d$，于是$ax'k+by'k=kd => ax+by=c$。QED。
+反过来，假定$(a,b)=d, d\mid c$，则$c=kd$，根据定理1.40，存在$x', y'$使得$ax'+by'=d$，于是$ax'k+by'k=kd \implies ax+by=c$。QED。
 
 有了这些准备工作，我们已经在解决丢番都问题的路上走得很远了。我们看两个定理：
 
@@ -396,11 +396,11 @@ $acx+bcy=c$。注意到，$a\mid acx, a\mid bcy$，所以等式左边的式子�
 
 $ax+by=a(x_0+\frac{kb}{(a, b)})+b(y_0-\frac{ka}{(a, b)})=ax_0+by_0+\frac{abk}{(a, b)}-\frac{abk}{(a, b)}=c$。QED。
 
-我们假定还有别的形式，那么这样的$x,y$一定可以写成：$x=x_0+\frac{kb}{(a,b)}+x', y=y_0-\frac{ka}{(a,b)}+y'$。代入方程后，经过简化可以得到：$ax'-by'\equiv 0$。对于特定的$a, b$，$x', y'$要么都是0，于是这个解的形式退化为通解形式；要么形如$ma, mb => \frac{m(a, b)a}{(a, b)}, \frac{m(a, b)b}{(a, b)}$，可以合并到通式。QED。
+我们假定还有别的形式，那么这样的$x,y$一定可以写成：$x=x_0+\frac{kb}{(a,b)}+x', y=y_0-\frac{ka}{(a,b)}+y'$。代入方程后，经过简化可以得到：$ax'-by'\equiv 0$。对于特定的$a, b$，$x', y'$要么都是0，于是这个解的形式退化为通解形式；要么形如$ma, mb \implies \frac{m(a, b)a}{(a, b)}, \frac{m(a, b)b}{(a, b)}$，可以合并到通式。QED。
 
 另一种证明是：
 
-已知$ax_0+by_0=c, ax+by=c$，两式相减得到：$a(x_0-x)+b(y_0-y)=0 => \frac{x_0-x}{b}=\frac{y-y_0}{a}$。这两个式子，一个是与$x$有关，一个与$y$有关，要想这个等式对所有的$x, y$成立，那么必然等于一个常数$-k$。于是：$x_0-x=-kb, y-y_0=-ka$，得到：$x=x_0+kb, y=y_0-ka$。
+已知$ax_0+by_0=c, ax+by=c$，两式相减得到：$a(x_0-x)+b(y_0-y)=0 \implies \frac{x_0-x}{b}=\frac{y-y_0}{a}$。这两个式子，一个是与$x$有关，一个与$y$有关，要想这个等式对所有的$x, y$成立，那么必然等于一个常数$-k$。于是：$x_0-x=-kb, y-y_0=-ka$，得到：$x=x_0+kb, y=y_0-ka$。
 
 **练习1.54**：找到方程$24x+9y=33$的所有解。
 
