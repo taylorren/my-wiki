@@ -189,6 +189,28 @@ $a=\prod_{i=1}^{m}p_i^{q_i}, b=\prod_{j=1}^{n}r_j^{s_j}$
 
 $(a, b)*(a, c)=(a(a, c), b(a,c))=(aa, ac, ab, bc)=(a(a, b, c), bc)$，由$(b, c)=1\implies (a, b, c)=1$，所以$(a, b)*(a, c)=(a, bc)$。
 
+另外一个证明请自行完成。
+
+**定理2.29**：令$a, b, c$为整数，若$(a, b)=1, (a, c)=1$，那么$(a, bc)=1$。
+
+*证明*：
+
+由题设，可有：$ax+by=1 \implies by=1-ax$以及$ax'+cy'=1 \implies cy'=1-ax'$。两式左右各自相乘得到：
+
+$bc(yy')=(1-ax)(1-ax')=1-ax-ax'+a^2xx'$
+
+整理后可以得到：
+
+$a(x+x'-axx')+bc(yy')=1$$
+
+QED。
+
+**定理2.30**：若$(a, b)=d$，那么$(\frac{a}{d}, \frac{b}{d})=1$。
+
+*证明*:
+
+令$(\frac{a}{d}, \frac{b}{d})=x$，于是有：$\frac{a}{d}=xm, \frac{b}{d}=xn \implies a=xmd, b=xnd$。因此说，$a, b$都有一个公因子是$xd$。但既然$d$已经是$a, b$的最大公约数，所以$x$只能等于1，也就是说$\frac{a}{d}, \frac{b}{d}$的最大公约数是1。QED。
+
 [^1]: 在我的这些笔记中，可能会混合使用“素数”、“质数”，以后不再说明。
 
 [^2]: `s.t`是`such that`的缩写，可以翻译为“使得”。其他数学符号（$\forall, \exists$）的说明在此不赘述。
