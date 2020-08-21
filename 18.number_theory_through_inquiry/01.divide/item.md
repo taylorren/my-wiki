@@ -457,15 +457,15 @@ $kb=p_1^{s_1+t_1}p_2^{s_2+t_2}...p_n^{s_n+t_n}...$
 
 令$mh_1=lcm(ma, mb), h_2=lcm(a, b)$。
 
-$ma|mh_1 =\gt a|h_1, mb|mh_1 =\gt b|h_1$。因此$h_1$是$a, b$共同的倍数。但我们已经知道$h_2$是最小公倍数，所以$h_1\ge h_2$。
+$ma|mh_1 \implies a|h_1, mb|mh_1 \implies b|h_1$。因此$h_1$是$a, b$共同的倍数。但我们已经知道$h_2$是最小公倍数，所以$h_1\ge h_2$。
 
-同时，$a\mid h_2 =\gt am\mid mh_2, b\mid h_2 =\gt bm\mid h_2$，所以$mh_2$是$ma, mb$的公倍数，而$mh_1$才是$ma, mb$的最小公倍数，所以$mh_2 \ge mh_1 =\gt h_2\ge h_1$。
+同时，$a\mid h_2 \implies am\mid mh_2, b\mid h_2 \implies bm\mid h_2$，所以$mh_2$是$ma, mb$的公倍数，而$mh_1$才是$ma, mb$的最小公倍数，所以$mh_2 \ge mh_1 \implies h_2\ge h_1$。
 
 综上，$h_1=h_2$。引理证明完毕。
 
-令$g=(a, b) =\gt a=gc, b=gd$。因此$(c, d)=(a/g, d/g)=1$。
+令$g=(a, b) \implies a=gc, b=gd$。因此$(c, d)=(a/g, d/g)=1$。
 
-$c\mid lcm(c,d) =\gt lcm(c, d)=kc$。由于$d\mid kc, (c,d)=1, d\mid k$，因此$cd\le kc$。但$cd$是一个倍数，而$kc$是最小公倍数，所以$kc\le cd$。综合一下，只能是$kc=cd$，也就是$lcm(c,d)=cd$。
+$c\mid lcm(c,d) \implies lcm(c, d)=kc$。由于$d\mid kc, (c,d)=1, d\mid k$，因此$cd\le kc$。但$cd$是一个倍数，而$kc$是最小公倍数，所以$kc\le cd$。综合一下，只能是$kc=cd$，也就是$lcm(c,d)=cd$。
 
 结合引理我们得到：
 
