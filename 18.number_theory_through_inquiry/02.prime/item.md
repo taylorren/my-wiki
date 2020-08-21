@@ -17,7 +17,7 @@ visible: false
 
 **定义**：自然数$n$为合数，当且仅当$n$是小于$n$的自然数的乘积。
 
-**定理2.1**：$\forall n \in N, n>1, \exists p, s.t\: p|n$。[^2]
+**定理2.1**：$\forall n \in N, n\gt1, \exists p, s.t\: p|n$。[^2]
 
 **练习**：试着写下小于100的所有素数。不要用计算器或其他的帮助。
 
@@ -49,7 +49,7 @@ visible: false
 1. 做出$n=1, 2,..., 100$时$\pi (n)$的图像。
 2. 做出一个有关$\pi (n) \sim n$之间关系的猜想。特别地，$\frac{\pi (n)}{n}$是一个递增函数还是递减函数？会不会存在一个极限呢？
 
-高斯提出，$\pi (n) \sim \frac{n}{ln(n)}$，然后进一步精细地定义为$\pi (n) \sim Li(n)$，也就是$\lim_{n->\infty}\frac{\pi (n)}{Li(n)}=1$，而其中$Li(n)=\int_2^n\frac{dx}{ln(x)}$。（参见[《上帝创造整数：高斯》](../../gcti/gauss)）
+高斯提出，$\pi (n) \sim \frac{n}{ln(n)}$，然后进一步精细地定义为$\pi (n) \sim Li(n)$，也就是$\lim_{n\to\infty}\frac{\pi (n)}{Li(n)}=1$，而其中$Li(n)=\int_2^n\frac{dx}{ln(x)}$。（参见[《上帝创造整数：高斯》](../../gcti/gauss)）
 
 ## 算术基本定理
 
@@ -231,7 +231,7 @@ QED。
 
 *证明*：
 
-我们可以构造这么一个数字：$n=k!+1$。我们可以声明在2到$k$的区间中的任何一个数字$m$都无法被$n$整除。否则，如果$m\mid n$，那么$m\mid k! \implies m\mid (n-k!) \implies m\mid 1 => m=1$。和$m\in [2, k]$矛盾。QED。
+我们可以构造这么一个数字：$n=k!+1$。我们可以声明在2到$k$的区间中的任何一个数字$m$都无法被$n$整除。否则，如果$m\mid n$，那么$m\mid k! \implies m\mid (n-k!) \implies m\mid 1 \implies m=1$。和$m\in [2, k]$矛盾。QED。
 
 **定理2.34**：令$k$为一个自然数，那么存在一个素数大于$k$。
 
