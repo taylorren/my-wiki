@@ -11,15 +11,15 @@ visible: false
 
 **定义3**：假定$a$和$d$是两个整数，我们定义$d$**整除**$a$，记做$d\mid a$，当且仅当存在一个整数$k$，使得$a=kd$。
 
-**定义4**：假定$a, b$以及$n$是整数，且$n\gt 0$。我们说，$a和b$**同模**于$n$当且仅当$n\mid (a-b)$，记为$a\equiv b \:(mod\: n)$。读作“a与b同模于n”。
+**定义4**：假定$a, b$以及$n$是整数，且$n\gt 0$。我们说，$a和b$**同模**于$n$当且仅当$n\mid (a-b)$，记为$a\equiv b \pmod{n}$。读作“a与b同模于n”。
 
 **定理**：令$n$为一整数，如果$6\mid n$，则$3\mid n$。
 
 *证明*：根据定义3，如果$6|n$，则存在一个整数$k$，使得$n=6*k$，则$n=6*k=3*(2k)$，若令$k'=2k$，则$n=3*k'$，满足定义3的定义，所以$3\mid n$。
 
-**定理**：令$k$为一整数，如果$k\equiv 7\:(mod\:2)$，那么$k\equiv3\:(mod\:2)$。
+**定理**：令$k$为一整数，如果$k\equiv 7\pmod{2}$，那么$k\equiv3\pmod{2}$。
 
-*证明*：因为$k\equiv 7\:(mod\:2)$，所以根据定义4，$2|(k-7)$，再根据定义3，存在一个整数$n$，使得$k-7=2*n$，等式两边各加4，得到$k-3=2*(n+2)$，所以$2|(k-3)$，也就是$k\equiv3\:(mod\:2)$。
+*证明*：因为$k\equiv 7\pmod{2}$，所以根据定义4，$2|(k-7)$，再根据定义3，存在一个整数$n$，使得$k-7=2*n$，等式两边各加4，得到$k-3=2*(n+2)$，所以$2|(k-3)$，也就是$k\equiv3\pmod{2}$。
 
 ## 整除性和同模
 
@@ -43,27 +43,27 @@ visible: false
 
 接下来看看同模的一些定理。
 
-**定理1.9**：令$a$和$n$为整数，且$n\gt0$，那么$a\equiv a\:(mod\:n)$
+**定理1.9**：令$a$和$n$为整数，且$n\gt0$，那么$a\equiv a\pmod{n}$
 
-**定理1.10**：令$a, b, n$为整数，且$n\gt0$。若$a\equiv b\:(mod\:n)$，则$b\equiv a\:(mod\:n)$。
+**定理1.10**：令$a, b, n$为整数，且$n\gt0$。若$a\equiv b\pmod{n}$，则$b\equiv a\pmod{n}$。
 
-**定理1.11**：令$a, b, c, n$为整数，且$n\gt0$。若$a\equiv b\:(mod\:n)$，且$b\equiv c\:(mod\:n)$，则$a\equiv c\:(mod\:n)$。
+**定理1.11**：令$a, b, c, n$为整数，且$n\gt0$。若$a\equiv b\pmod{n}$，且$b\equiv c\pmod{n}$，则$a\equiv c\pmod{n}$。
 
-*证明*：由题设，$a-b=k_1*n$，$b-c=k_2*n$，两式相加得到：$a-c=(k_1+k_2)*n$，根据定义3和4，$a\equiv c\:(mod\:n)$。[QED](https://en.wikipedia.org/wiki/Q.E.D.)
+*证明*：由题设，$a-b=k_1*n$，$b-c=k_2*n$，两式相加得到：$a-c=(k_1+k_2)*n$，根据定义3和4，$a\equiv c\pmod{n}$。[QED](https://en.wikipedia.org/wiki/Q.E.D.)
 
 以下的定理描述了同模的加、减和乘运算，除法运算需要另外考虑。
 
-**定理1.12**：令$a, b, c, d, n$为整数，且$n\gt0$。若$a\equiv b\:(mod\:n), c\equiv d\:(mod\:n)$，则$a+c\equiv b+d\:(mod\:n)$。
+**定理1.12**：令$a, b, c, d, n$为整数，且$n\gt0$。若$a\equiv b\pmod{n}, c\equiv d\pmod{n}$，则$a+c\equiv b+d\pmod{n}$。
 
-**定理1.13**：令$a, b, c, d, n$为整数，且$n\gt0$。若$a\equiv b\:(mod\:n), c\equiv d\:(mod\:n)$，则$a-c\equiv b-d\:(mod\:n)$。
+**定理1.13**：令$a, b, c, d, n$为整数，且$n\gt0$。若$a\equiv b\pmod{n}, c\equiv d\pmod{n}$，则$a-c\equiv b-d\pmod{n}$。
 
-**定理1.14**：令$a, b, c, d, n$为整数，且$n\gt0$。若$a\equiv b\:(mod\:n), c\equiv d\:(mod\:n)$，则$ac\equiv bd\:(mod\:n)$。
+**定理1.14**：令$a, b, c, d, n$为整数，且$n\gt0$。若$a\equiv b\pmod{n}, c\equiv d\pmod{n}$，则$ac\equiv bd\pmod{n}$。
 
 这些证明都不是很难。请自行完成。
 
 同模运算也可以用在指数运算上。证明时需要用到[数学归纳法](https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E5%BD%92%E7%BA%B3%E6%B3%95)。
 
-**定理1.18**：令$a, b, k, n$为整数，且$n\gt0, k\gt0$。若$a\equiv b\:(mod\:n)$，则$a^k\equiv b^k\:(mod\:n)$
+**定理1.18**：令$a, b, k, n$为整数，且$n\gt0, k\gt0$。若$a\equiv b\pmod{n}$，则$a^k\equiv b^k\pmod{n}$
 
 *证明：*
 
@@ -71,15 +71,13 @@ $k=1$时，定理显然成立。
 
 假定k=p时，定理仍然成立。
 
-$k=p+1$时，$a^{p+1}b^{p+1}=(a^p*b^p)*(a*b)$，结合$k=1$以及$k=p$的情形，得到$a^p \equiv b^p\:(mod\:n)$以及$a \equiv b\:(mod\:n)$，根据定理1.14，得到$a^{p+1} \equiv b^{p+1}\:(mod\:n)$
-
-QED
+$k=p+1$时，$a^{p+1}b^{p+1}=(a^p*b^p)*(a*b)$，结合$k=1$以及$k=p$的情形，得到$a^p \equiv b^p\pmod{n}$以及$a \equiv b\pmod{n}$，根据定理1.14，得到$a^{p+1} \equiv b^{p+1}\pmod{n}$。QED。
 
 有兴趣的读者，可以针对上述定理，用一些数字加以测试和验证。
 
-**定理1.21**：令自然数$n$可以以10进制表述为：$n=a_ka_{k-1}...a_1a_0$，如果$m=\sum_{i=0}^ka_i=a_k+a_{k-1}+a_1+a_0$，则$n\equiv m\:(mod\:3)$。
+**定理1.21**：令自然数$n$可以以10进制表述为：$n=a_ka_{k-1}...a_1a_0$，如果$m=\sum_{i=0}^ka_i=a_k+a_{k-1}+a_1+a_0$，则$n\equiv m\pmod{3}$。
 
-*证明*：$n$可以进一步写作$n=3*(3*a_k)*10^k+a_k*10^k+3*(3*a_{k-1})*10^k+a_{k-1}*10^k+...+3*(3*a_1)*10^1+a_1*10^1+a_0=3*\sum_{i=1}^k 3*a_i*10^i+\sum_{j=0}^k a_j=3*\sum_{i=1}^k 3*a_i*10^i+m$。因此，3（甚至9）可以整除$n-m$，所以$3|n-m$。根据定义4，$n\equiv m\:(mod\:3)$
+*证明*：$n$可以进一步写作$n=3*(3*a_k)*10^k+a_k*10^k+3*(3*a_{k-1})*10^k+a_{k-1}*10^k+...+3*(3*a_1)*10^1+a_1*10^1+a_0=3*\sum_{i=1}^k 3*a_i*10^i+\sum_{j=0}^k a_j=3*\sum_{i=1}^k 3*a_i*10^i+m$。因此，3（甚至9）可以整除$n-m$，所以$3|n-m$。根据定义4，$n\equiv m\pmod{3}$。QED。
 
 有了以上这些定理，我们可以开始证明一些有关数字的有趣内容。比如，我们从小就学到的，一个自然数能被3整除**当且仅当**这个自然数的各位数字之和能被3整除。
 
@@ -117,7 +115,7 @@ QED
 
 证明了**除法算法**后，可以引入如下定理。
 
-**定理1.28**：令$a, b, n$为整数，且$n\gt 0$。那么$a\equiv b\:(mod\:n)$当且仅当$n$除$a, b$时有相同的余数。等价描述是，$a\equiv b\:(mod\:n)$当且仅当$a=nq_1+r_1 (0\le r_1 \le n-1), b=nq_2+r_2 (0\le r_2 \le n-1)$，且$r_1=r_2$。
+**定理1.28**：令$a, b, n$为整数，且$n\gt 0$。那么$a\equiv b\pmod{n}$当且仅当$n$除$a, b$时有相同的余数。等价描述是，$a\equiv b\pmod{n}$当且仅当$a=nq_1+r_1 (0\le r_1 \le n-1), b=nq_2+r_2 (0\le r_2 \le n-1)$，且$r_1=r_2$。
 
 这个定理的充分必要性证明不难。请自行完成。
 
@@ -362,11 +360,11 @@ $acx+bcy=c$。注意到，$a\mid acx, a\mid bcy$，所以等式左边的式子�
 
 我们继续向着解决丢番都方程进发。
 
-**定理1.45**：令$a, b, c, n$为整数，$n\gt0$，如果$ac\equiv bc\:(mod\: n), (c, n)=1$，则$a\equiv b\:(mod\:n)$。
+**定理1.45**：令$a, b, c, n$为整数，$n\gt0$，如果$ac\equiv bc\pmod{n}, (c, n)=1$，则$a\equiv b\pmod{n}$。
 
 *证明*：
 
-由题设得，$ac-bc=kn \implies (a-b)c=kn$。这表明$c\mid kn$。根据定理1.41, 如果$c\mid kn$，且$(c, n)=1$，那么$c\mid k$。假定$k=k'c$，于是$c(a-b)=kn=k'cn \implies a-b=k'n$，因此$a\equiv b\:(mod\:n)$。QED。
+由题设得，$ac-bc=kn \implies (a-b)c=kn$。这表明$c\mid kn$。根据定理1.41, 如果$c\mid kn$，且$(c, n)=1$，那么$c\mid k$。假定$k=k'c$，于是$c(a-b)=kn=k'cn \implies a-b=k'n$，因此$a\equiv b\:\pmod{n}$。QED。
 
 **定理1.48**：令$a, b, c$为整数，且$a, b$不同时为0，则存在整数$x, y$满足等式$ax+by=c$当且仅当$(a, b)\mid c$。
 
