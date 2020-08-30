@@ -189,13 +189,13 @@ $f(x+kp)-f(x)=a_n((x+kp)^n-x^n)+a_{n-1}((x+kp)^{n-1}-x^{n-1})+...+a_1((x+kp)-x)+
 
 *解*：这题用试错法做太累了。我们稍后来求解。
 
-**定理3.19**：令$a, b, n \in Z, n\gt 0$。那么$ax\equiv b\pmod{n}$有解当且仅当存在$x, y\in Z\:s.t\:ax+ny=b$。
+**定理3.19**：令$a, b, n \in \mathbb{Z}, n\gt 0$。那么$ax\equiv b\pmod{n}$有解当且仅当存在$x, y\in \mathbb{Z}\:s.t\:ax+ny=b$。
 
 *证明*：假定$ax\equiv b\pmod{n}$有解，那么存在一个整数$z$并满足$ax-b=nz \implies ax+n(-z)=b$，定理成立。
 
 又，假定存在$x,y$使得$ax+ny=b$成立，那么$ax-b=n(-y)\implies n\mid(ax-b)\implies ax\equiv b\pmod{n}$。
 
-**定理3.20**：令$a, b, n \in Z, n\gt 0$。那么等式$ax\equiv b\pmod{n}$有解当且仅当$(a,n)\mid b$。
+**定理3.20**：令$a, b, n \in \mathbb{Z}, n\gt 0$。那么等式$ax\equiv b\pmod{n}$有解当且仅当$(a,n)\mid b$。
 
 *证明*：有定理3.19以及定理1.48后，我们可以很方便证明本定理。
 
@@ -203,11 +203,78 @@ $f(x+kp)-f(x)=a_n((x+kp)^n-x^n)+a_{n-1}((x+kp)^{n-1}-x^{n-1})+...+a_1((x+kp)-x)+
 
 这个方程中，$a=24, n=213, b=123$。$(a,n)=3$，而$3 \mid 123$。所以有解。可以得到$x=14$是本方程的解。具体求解过程略。
 
-**定理3.24**：令$a, b, n\in Z, n\gt 0$，那么：
+**定理3.24**：令$a, b, n\in \mathbb{Z}, n\gt 0$，那么：
 
-1. 同余方程$ax\equiv b\pmod{n}$有解，当且仅当$(a, b)\mid n$。
+1. 同余方程$ax\equiv b\pmod{n}$有解，当且仅当$(a, n)\mid b$。
 1. 如果$x_0$是上述方程的一个解，那么所有的解具有如下形式：$x_0+(\frac{n}{(a, n)}*m)\pmod{n}$，其中$m=0, 1, 2, .., (a,n)-1$。
 1. 如果方程有解，那么在$n$的标准完全余数集中正好有$(a, n)$个解。
+
+*证明*：
+
+定理3.24中的1就是定理3.20。
+
+令$(a, n)=g$。
+
+如果$x_0$是方程的解，因此有$ax_0\equiv b\pmod{n}$。
+
+$ax_m=ax_0+a\frac{n}{g}*m=ax_0+(\frac{a}{g}*m)*n\implies ax_m-ax_0=kn\implies ax_m\equiv ax_0\pmod{n}\implies ax_m\equiv b\pmod{n}$。QED。所以，定理中的$x_m$肯定是同余方程的解。
+
+另外，假定$x$是同余方程的解，那么：
+
+$ax\equiv ax_0\equiv b\pmod{n}\implies a(x-x_0)\equiv 0\pmod{n}\implies \frac{a}{g}(x-x_0)\equiv 0\pmod{\frac{n}{g}}\implies x-x_0=t*\frac{n}{g}\implies x=x_0+\frac{n}{g}t$。
+
+最后，我们对$t$进行限定。$t$对$g$的模肯定可以得到一个标准完全余数集$m=\{0, 1, 2, ..., g-1\}$。
+
+以上证毕定理的第二部分。
+
+**第三部分我不会证明。**
+
+## 线性同余系统：中国余数定理
+
+线性同余系统或者说“中国余数定理”用来解决一系列联立的同余方程。
+
+**练习3.25**：17个海盗抢了一堆金币。17个人平均分，剩下3个；他们杀死了一个海盗，16人平均分，剩下10个；他们又杀死一个海盗，15人终于可以平均分完这些金币。那么这些海盗抢来的金币最少有几个？
+
+**练习3.26**（婆罗门笈多，Brahmagupta在公元7世纪时提出）一篮子鸡蛋，每次分别取出2/3/4/5/6个时，分别会留下1/2/3/4/5个鸡蛋在篮子里，而每次取7个时，正好能取完。篮子里最少要有几个鸡蛋？
+
+这些题目都很有挑战性，但解题过程也很有趣！
+
+这里我们先给出答案，分别是最少有`3930`枚金币以及最少有`199`个鸡蛋！
+
+所有这些类似的问题都是对一元线性同余方程组求解，都可以归并到“中国余数问题”并有所谓“中国余数定理”（`Chinese Remainder Theorem`）来进行求解。相关知识可以参阅[维基百科词条的说明](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86)。
+
+下面我们先来看看比较简单的问题和相关的问题。
+
+**定理3.27**：令$a, b, m, n\in \mathbb{Z}, m\gt0, n\gt0$。那么：
+$x\equiv a\pmod{n}\\x\equiv b\pmod{m}$
+
+有解当且仅当$(n,m)\mid a-b$。
+
+*证明*：
+
+假定：$x\equiv a\pmod{n}\\x\equiv b\pmod{m}$，那么令$(n,m)=g$，可以得到：
+
+$x-a=k_1n=k_1n'g\\x-b=k2m=k_2m'g$，两式相减得到：
+
+$a-b=k_2m'g-k_1n'g=g(k_2m'-k_1n')\implies g\mid a-b$。
+
+而如果$g\mid a-b$，那么我们有$a-b=kg$。对于第一个等式来说，$x=a+ln$肯定是解。我们要找出$l$使得$x$也满足第二个方程$x=a+ln\equiv b\pmod{m}\Leftrightarrow ln\equiv b-a\pmod{m}$。而既然$(n, m)=g$，根据定理1.40，一定存在两个整数$y, z$使得$ny+mz=g\implies ny-g=mz\implies ny\equiv g\pmod{m}\implies n(-yk)\equiv g(-k)=b-a\pmod{m}$。令$l=-yk$，那么$x=a-ykn$同样满足第二个方程。
+
+**定理3.28**：令$a, b, m, n\in\mathbb{Z}, m\gt0, n\gt0, (n, m)=1$。那么$x\equiv a\pmod{n}\\x\equiv b\pmod{m}$有一个以$mn$为模的唯一解。
+
+*证明*：
+
+根据定理3.27，我们知道这个方程组有解，因为$(n, m)=1\mid a-b$。
+
+假定$x, x'$都是方程组的解。那么有：
+
+$x\equiv a\pmod{n}\\x\equiv b\pmod{m}$以及$x'\equiv a\pmod{n}\\x'\equiv b\pmod{m}$。
+
+根据定理1.13，我们得到：
+
+$x-x'\equiv 0\pmod{n}\\x-x'\equiv 0\pmod{m}$。
+
+因此有：$n\mid(x-x')$以及$m\mid(x-x')$，而由于$(n, m)=1$，根据定理1.48（或者2.25），我们有$mn\mid(x-x')\implies x\equiv x'\pmod{mn}$。QED。
 
 [^1]: 这里我们假定所有多项式的系数都是整数。下同。
 

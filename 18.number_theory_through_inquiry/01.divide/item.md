@@ -452,7 +452,7 @@ $kb=p_1^{s_1+t_1}p_2^{s_2+t_2}...p_n^{s_n+t_n}...$
 
 $ma|mh_1 \implies a|h_1, mb|mh_1 \implies b|h_1$。因此$h_1$是$a, b$共同的倍数。但我们已经知道$h_2$是最小公倍数，所以$h_1\ge h_2$。
 
-同时，$a\mid h_2 \implies am\mid mh_2, b\mid h_2 \implies bm\mid h_2$，所以$mh_2$是$ma, mb$的公倍数，而$mh_1$才是$ma, mb$的最小公倍数，所以$mh_2 \ge mh_1 \implies h_2\ge h_1$。
+同时，$a\mid h_2 \implies am\mid mh_2, b\mid h_2 \implies bm\mid mh_2$，所以$mh_2$是$ma, mb$的公倍数，而$mh_1$才是$ma, mb$的最小公倍数，所以$mh_2 \ge mh_1 \implies h_2\ge h_1$。
 
 综上，$h_1=h_2$。引理证明完毕。
 
