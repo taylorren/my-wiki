@@ -254,7 +254,7 @@ $x\equiv a\pmod{n}\\x\equiv b\pmod{m}$
 
 假定：$x\equiv a\pmod{n}\\x\equiv b\pmod{m}$，那么令$(n,m)=g$，可以得到：
 
-$x-a=k_1n=k_1n'g\\x-b=k2m=k_2m'g$，两式相减得到：
+$x-a=k_1n=k_1n'g\\x-b=k_2m=k_2m'g$，两式相减得到：
 
 $a-b=k_2m'g-k_1n'g=g(k_2m'-k_1n')\implies g\mid a-b$。
 
