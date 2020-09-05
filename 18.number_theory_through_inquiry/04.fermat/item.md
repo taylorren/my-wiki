@@ -44,3 +44,49 @@ $a^i$对$n$求模可以得到一个标准完全余数集，这个余数集中元
 如果$a\equiv 1\pmod{n}$，定理成立。以下假定$a\not\equiv 1\pmod{n}$。
 
 根据定理4.4，我们知道存在$i, j\:s.t.\:a^i\equiv a^j\pmod{n}\implies a^{i-j}a^j\equiv 1\times a^j\pmod{n}$。结合定理4.6，$(a, n)=1\implies (a^j, n)=1$。再根据定理4.5，得出$a^{i-j}\equiv 1\pmod{n}$。QED。
+
+这个定理告诉我们，一个自然数如果和一个模数互质，那么一定存在一个最小的幂次，使得这个自然数的该次幂对该模数的模为1。这个概念很重要，值得被定义：
+
+**定义**：令$a, n\in \mathbb{N}, (a, n)=1$。那么使得$a^k\equiv 1\pmod{n}$的最小的那个自然数$k$被称为$a$对$n$求模的秩（`order`），并记为$ord_n(a)$。
+
+## 费马小定理
+
+本节的终极定理是所谓的“费马小定理”（`Fermat's Little Theroem`）。它告诉我们，**一个数字的某次方会与1同模于某个素数**。
+
+以下我们进行一些练习，来对这个定理有一些概念。
+
+**练习4.7**：选择一些互质的数字$a, n$，并计算$ord_n(a)$。看看是否能进行一些猜想。
+
+*解*：
+
+1. $a=2, n=3$
+
+$a^1=2\equiv 2\pmod{3}\\a^2=4\equiv 1\pmod{3}\implies ord_3(2)=2$。
+
+1. $a=3, n=11$
+
+$a^1=3\equiv 3\pmod{11}\\a^2=9\equiv 9\pmod{11}\\a^3=27\equiv 5\pmod{11}\\a^4=81\equiv 4\pmod{11}\\a^5=243\equiv 1\pmod{11}\implies ord_{11}(3)=5$。
+
+在练习中，我们会注意到，在余数为1之前，对$n$的余数一定不会重复。这个观察直接导致如下定理：
+
+**定理4.8**：令$a, n\in\mathbb{N}, (a, n)=1, k=ord_n(a)$，那么$a^1, a^2, ..., a^k$两两一定与$n$不同模，也就是$a_i\not\equiv a_j\pmod{n}, i\ne j$。
+
+*证明*：
+
+假定存在$a^i\equiv a^j, i\ne j\in [1, k]$。不妨假定$i\gt j$，我们得到$a^{i-j}\equiv 1$。所以$k=ord_n(a)=i-j$。但$i-j\lt k$，与题设矛盾。QED。
+
+如果一个自然数取大于其秩$k$的幂，那么对$n$的模肯定不会不同于$[1, k]$之间幂对$n$的模。
+
+**定理4.9**：令$a, n\in\mathbb{N}, (a, n)=1, k=ord_n(a)$。那么对于任何自然数$m$，$a^m$一定与$\{a^1, a^2, ..., a^k\}$中的某个数对$n$同模。
+
+*证明*：（略。可以用到除法算法。）
+
+**定理4.10**：令$a, n\in\mathbb{N}, (a, n)=1, k=ord_n(a)$。令$m$为任一自然数，那么$a^m\equiv 1\pmod{n} \iff k\mid m$。
+
+*证明*：
+
+由$a^m\equiv 1\pmod{n}$及除法算法可知：
+
+$a^m=a^{qk+r}=a^{qk}a^r=(a^k)^qa^r\equiv 1^qa^r\equiv a^r\pmod{n}$。
+
+所以，$a^r\equiv 1\pmod{n}, 0\le r\lt k$。但$k$已经是最小的那个幂指数（因为$k$是秩），所以$r=0\implies k\mid m$。反之，从$k\mid m$也可以得出$a^m\equiv 1\pmod{n}$。QED。
