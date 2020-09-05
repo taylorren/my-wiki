@@ -138,6 +138,7 @@ Stockfish在这里的下法和俄罗斯大师Yuri Razuvaev一样，只是次序�
 
 **棋谱下载**：
 
-1. [Kaissa - Chaos 1974 World Computer Championship, Stockholm](./1.pgn)
+1. [Kaissa - Chaos 1974 World Computer Championship, Stockholm](./Kaissa-Chaos_1974_World_Computer_Championship_Stockholm.pgn)
+2. [Stockfish - Houdini 2018 TCEC Season 11, Superfinal 2018 Game 5.pgn](Stockfish-Houdini_2018_TCEC_Season_11_Superfinal_2018_Game_5.pgn)
 
 [^1]: 50回合规则：从对局的某一回合开始，连续的50回合内，双方没有吃过一个棋子，并且所有的兵都没动过，可以由一方提出，经裁判核准后判为和棋。规则见[此处](https://jingyan.baidu.com/article/148a1921a2b0c94d71c3b1f8.html)。
