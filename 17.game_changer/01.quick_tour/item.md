@@ -40,11 +40,11 @@ title: A quick tour of computer chess competition
 
 16. Qb3会对黑更加不利，但Kaissa选择了更优美的下法。
 
-16. d5 Nce5 17. Qc2 Rhf8 18. B3
+16. d5 Nce5 17. Qc2 Rhf8 18. Bd3
 
 稍缓，黑有反击机会。
 
-18. Nxd 19. Qxd3 Rae8
+18. ... Nxd3 19. Qxd3 Rae8
 
 19. ... g5 20. Nf3 Qh3更有威胁，强制走出21. Bxg3而逼和。
 
@@ -104,7 +104,7 @@ Stockfish在这里的下法和俄罗斯大师Yuri Razuvaev一样，只是次序�
 
 白方准备Ke2，然后b2-b4。
 
-20. ... f5 21. Kf1 fxe4 22. b4 Nd7 23. Nc3!!
+>20. ... f5 21. Kf1 fxe4 22. b4 Nd7 23. Nc3!!
 
 [fen]r4rk1/pppn4/n2p2pb/P2Pp2p/1PQ1p2P/2N2P1R/8/R4K2[/fen]
 
@@ -134,10 +134,10 @@ Stockfish在这里的下法和俄罗斯大师Yuri Razuvaev一样，只是次序�
 
 终局。白方子力占优，后翼连兵的威力太大。黑方已经无法抵挡。
 
+2017年12月之前，引擎的水平也就大致如此了。但就在此时，国际象棋界听闻了一种新的国际象棋引擎。它强大、完全自学，它就是[AlphaZero](https://deepmind.com/blog/article/alphazero-shedding-new-light-grand-games-chess-shogi-and-go)。
 
+**棋谱下载**：
 
-
-
-
+1. [Kaissa - Chaos 1974 World Computer Championship, Stockholm](./1.pgn)
 
 [^1]: 50回合规则：从对局的某一回合开始，连续的50回合内，双方没有吃过一个棋子，并且所有的兵都没动过，可以由一方提出，经裁判核准后判为和棋。规则见[此处](https://jingyan.baidu.com/article/148a1921a2b0c94d71c3b1f8.html)。
