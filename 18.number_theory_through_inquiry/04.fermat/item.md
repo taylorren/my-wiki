@@ -147,7 +147,7 @@ $a^{p-1}(p-1)!\equiv (p-1)!\pmod{p}\implies a^{p-1}\equiv 1 \pmod{p}$。
 
 费马小定理讲述了对素数求模的信息，但如果我们要对合数求模又该如何？
 
-**定理4.21**：令$m, n\in\mathbb{N}, (m, n)=1, a\in\mathbb{Z}$。$x\equiv a\pmod{m} \& x\equiv a\pmod{n}\implies x\equiv a\pmod{mn}$。
+**定理4.21**：令$m, n\in\mathbb{N}, (m, n)=1, a\in\mathbb{Z}$。$x\equiv a\pmod{m}$且$x\equiv a\pmod{n}\implies x\equiv a\pmod{mn}$。
 
 *证明*：
 
@@ -326,3 +326,5 @@ Abu Ali al-Hasan ibn al-Haytham（约965-1040）曾考虑过如下的问题：�
 差不多过了800年后，Edward Waring（1736-1798）首次发表了威尔逊定理的一般表述，并将其归功于他的学生John Wilson（1741-1793）。Waring发表的文章中没有给出证明，人们相信Waring和Wilson都不知道如何证明。第一个公开发表的证明基于二项式定理，由拉格朗日于1773年发布，而且提供了威尔逊定理之逆定理的证明。
 
 接下来的这位是莱布尼兹。1894年，人们注意到在汉诺威图书馆中收藏的据说是莱布尼兹的手稿。我们通常不会认为莱布尼兹是数论的先锋。但是，我们在这些汇总了他在1683年之前成就的手稿中找到了费马小定理和威尔逊定理的证明。他的成就比欧拉证明费马小定理早了53年，比拉格朗日第一次发表威尔逊定理的证明早了90年。
+
+本章十分重要，也十分实用！
