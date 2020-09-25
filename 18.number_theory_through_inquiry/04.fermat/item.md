@@ -23,7 +23,7 @@ $2^0=1\equiv 1\pmod{7}\\2^1=2\equiv 2\pmod{7}\\2^2=4\equiv 4\pmod{7}\\2^3=8\equi
 
 *证明*：
 
-由$(a, n)=1$可知，存在$x, y$使得$ax+ny=1$。又由$a\equiv b\pmod{n}\implies a=kn+b$。因此$1=ax+ny=(kn+b)x+ny=knx+bx+ny=bx+(kx+y)n\implies (b, n）=1$。QED。
+由$(a, n)=1$可知，存在$x, y$使得$ax+ny=1$。又由$a\equiv b\pmod{n}\implies a=kn+b$。因此$1=ax+ny=(kn+b)x+ny=knx+bx+ny=bx+(kx+y)n\implies (b, n)=1$。QED。
 
 **定理4.4**：令$a, n\in\mathbb{N}$，那么存在$i, j\in\mathbb{N}, i\ne j$使得$a^i\equiv a^j\pmod{n}$。
 
